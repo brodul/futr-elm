@@ -1,0 +1,1 @@
+echo '"' $(http http://pizzerijapiramida.si/malice/  | pup '.jsrm-menu' | sed 's|"|\\"|g') '"' | node_modules/firebase-tools/bin/firebase database:set -y /model/piramida

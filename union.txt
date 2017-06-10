@@ -1,0 +1,1 @@
+echo '"' $(http http://www.pivnica-union.si/si/ | pup 'h4.foodDayMenuBlockTitle, .foodDayMenu div:parent-of(.foodItemImage-1) .foodItemDesc' | sed 's|"|\\"|g') '"' | node_modules/firebase-tools/bin/firebase database:set -y /model/union 
